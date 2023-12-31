@@ -113,5 +113,6 @@ void Student::print() const {
         << "Email: " << email << "\t"
         << "Age: " << age << "\t"
         << "Days in Course: {" << daysInCourse[0] << ", " << daysInCourse[1] << ", " << daysInCourse[2] << "}\t"
-        << "Degree Program: " << degreeProgramToString(degreeProgram) << std::endl;
+        << "Degree Program: " << degreeProgramToString(degreeProgram) << std::endl; 
+
 }
