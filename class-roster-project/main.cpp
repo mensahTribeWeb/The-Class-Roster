@@ -1,8 +1,10 @@
 #include <iostream>
+#include "student.h" 
+#include "roster.h" 
 #include <string>
 #include <array>
 
-
+int main() {
 /**
  Course Title: C867 - SCRIPTING AND PROGRAMMING - APPLICATIONS
  TOOLS: Cpp
@@ -21,4 +23,9 @@ const std::string studentData[] = {
     "A5,Nicholas,Mensah,nmensa2@wqu.edu,39,30, 60, 90,SOFTWARE"
 };
 
- // Class_Roster
+return 0;
+}
+#ifndef CLASS_ROSTER_H
+#define CLASS_ROSTER_H
+
+#endif // Class_Roster

@@ -22,8 +22,22 @@
 
 ## A.  Modify the “studentData Table” to include your personal information as the last item.
 
+              File Name: main.cpp
+              Line Number:  1-31
+              Change:  Modify Student Roster withe personal information
+
+### Modified Roster and Sucessful Compilation
+
+<img src="./README-IMG/modified-roster.png" alt="modified roster" />
+
 
 ## B.  Create a C++ project in your integrated development environment (IDE) with the following files:
+
+              File Name: main.cpp, degree.h, student.h, student.cpp, roster.h, roster.cpp 
+              Line Number:  -
+              Change:  Add files to complete section B
+
+
 Note: There must be a total of six source code files.
 -[X] degree.h 
 -[X] student.h 
@@ -32,8 +46,21 @@ Note: There must be a total of six source code files.
 -[X] roster.cpp
 -[X]  main.cpp
 
+### Added files
+
+<img src="./README-IMG/created-cpp-files.png" alt="created-cpp-files"/>
+
 ## C.  Define an enumerated data type DegreeProgram for the degree programs containing the data type values SECURITY, NETWORK, and SOFTWARE.
 Note: This information should be included in the degree.h file.
+
+               File Name: degree.h
+               Line Number:  1-14
+               Change:  Defined enumerated data type DegreeProgram containg data types
+
+### Defined Enumerated Data
+
+<img src="./README-IMG/defined-enum.png" alt="defined enum">
+
 
 
 ## D.  For the Student class, do the following:
