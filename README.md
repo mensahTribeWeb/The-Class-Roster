@@ -57,7 +57,7 @@ Note: This information should be included in the degree.h file.
                Line Number:  1-14
                Change:  Defined enumerated data type DegreeProgram containg data types
 
-### Defined Enumerated Data
+### Defined Enumerated Data 
 
 <img src="./README-IMG/defined-enum.png" alt="defined enum">
 
@@ -80,6 +80,19 @@ Note: This information should be included in the degree.h file.
 -[X]  array of number of days to complete each course
 
 -[X] degree program
+
+
+      File Name: student.h, student.cpp
+      Line Number:  1-28, 1-16
+      Change:  Add: 
+
+
+#### student.cpp
+
+   <div style="display: flex; flex-direction: row; gap: 6;">
+      <image src="./README-IMG/section-c-student-cpp.png" alt="c-student-cpp"/>
+     <image src="./README-IMG/section-c-student-h.png" alt="c-student-h"/>
+   </div>
 
 
 ### 2.  Create each of the following functions in the Student class:
