@@ -11,4 +11,7 @@ enum DegreeProgram {
 	SOFTWARE
 };
 
+// Function declaration
+std::string degreeProgramToString(DegreeProgram degreeProgram);
+
 #endif
