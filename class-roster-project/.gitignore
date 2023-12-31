@@ -1,0 +1,60 @@
+# Ignore Visual Studio files and directories
+.vs/
+x64/
+
+# Ignore user-specific files
+*.suo
+*.user
+*.sdf
+*.opensdf
+
+# Ignore compiled object files and libraries
+*.obj
+*.o
+*.a
+*.lib
+
+# Ignore executables
+*.exe
+*.out
+
+# Ignore IPCH directory
+ipch/
+
+# Ignore Mac files
+.DS_Store
+
+# Ignore user-specific files and directories
+ipch/
+.idea/
+*.suo
+*.user
+*.sdf
+*.dbmdl
+*.dbproj.schemaview
+Thumbs.db
+ehthumbs.db
+
+# Ignore Windows image file caches and folders
+[Tt]humbs.db
+[Dd]esktop.ini
+
+# Ignore Visual Studio Code settings
+.vscode/
+
+# Ignore compiled binaries
+*.suo
+*.log
+*.exe
+*.pdb
+*.dll
+*.idb
+*.ilk
+*.msm
+*.lib
+*.4th
+*.zip
+*.csv
+
+# Ignore node_modules directory
+node_modules/
