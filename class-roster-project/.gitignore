@@ -58,3 +58,8 @@ ehthumbs.db
 
 # Ignore node_modules directory
 node_modules/
+
+# Exclude
+
+/*
+!/README*
