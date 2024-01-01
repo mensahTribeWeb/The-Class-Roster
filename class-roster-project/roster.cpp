@@ -57,7 +57,7 @@ void Roster::parseAndAddStudent( std::string& studentData) {
 // Function to print all students in the roster
 void Roster::printAll() {
     for (int i = 0; i < classRosterArray.size(); ++i) {
-        std::cout << "Student " << classRosterArray[i]->getStudentID() << "\t"; //adjusted per requirements
+        std::cout << "Student " << classRosterArray[i]->getStudentID() << "\t"; 
         classRosterArray[i]->print(); 
         std::cout << std::endl;
     }
@@ -130,6 +130,17 @@ void Roster::printInvalidEmails() {
     }
 
     std::cout << std::endl;  
+}
+
+//Implement print By Dgree
+
+void Roster::printByDegreeProgram(DegreeProgram degreeProgram) {
+    for (int i = 0; i < classRosterArray.size(); ++i) {
+        if (classRosterArray[i]->getDegreeProgram() == degreeProgram) {
+            classRosterArray[i]->print();  
+            std::cout << std::endl;
+        }
+    }
 }
 
 

@@ -54,6 +54,12 @@ classRoster->add("A8", "Test", "Student", "test.student@invalid@address", 21, 30
 // After adding A8, call the printInvalidEmails function to test
 classRoster->printInvalidEmails();
 
+// Testing printByDegreeProgram function for SOFTWARE degree program
+std::cout << "---- Printing students with SOFTWARE degree program ----" << std::endl;
+classRoster->printByDegreeProgram(DegreeProgram::SOFTWARE);
+std::cout << "--------------------------------------------------------" << std::endl;
+
+
 // Print all students after removal
 std::cout << "\nAfter removal:\n";
 classRoster->printAll();

@@ -40,8 +40,11 @@ public:
     //Function to get AvgDays
     void printAverageDaysInCourse(const std::string& studentID);
 
-    //print valid email
+    //print valid email Function
     void printInvalidEmails();
+
+    //Print By DegreeProgram Function
+    void printByDegreeProgram(DegreeProgram degreeProgram);
 };
 
 #endif // ROSTER_H
