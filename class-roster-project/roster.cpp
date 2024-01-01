@@ -55,9 +55,9 @@ void Roster::parseAndAddStudent( std::string& studentData) {
 
 
 // Function to print all students in the roster
-void Roster::printAllStudents() {
+void Roster::printAll() {
     for (int i = 0; i < classRosterArray.size(); ++i) {
-        std::cout << "Student " << i + 1 << ":" << std::endl;
+        std::cout << "Student " << classRosterArray[i]->getStudentID() << "\t"; //adjusted per requirements
         classRosterArray[i]->print(); 
         std::cout << std::endl;
     }

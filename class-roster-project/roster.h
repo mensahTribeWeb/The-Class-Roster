@@ -18,7 +18,8 @@ public:
     Roster();
     void parseAndAddStudent( std::string& studentData);
     void addStudent(Student* student);
-    void printAllStudents();
+    // Update the declaration of printAllStudents to match the new requirements I have been using this for testing
+    void printAll();
 
     // Function to add a student with individual parameters
     void add(

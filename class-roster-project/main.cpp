@@ -39,14 +39,14 @@ classRoster->add("A6", "Jane", "Doe", "jane.doe@email.com", 25, 35, 40, 30, Degr
 classRoster->add("A7", "John", "Doe", "john.doe@email.com", 28, 45, 38, 29, DegreeProgram::NETWORK);
 
 
-classRoster->printAllStudents();
+classRoster->printAll();
 
 // Remove a student by ID (change 'A6' to a valid student ID)
 classRoster->remove("A7");
 
 // Print all students after removal
 std::cout << "\nAfter removal:\n";
-classRoster->printAllStudents();
+classRoster->printAll();
 
 delete classRoster;
 
