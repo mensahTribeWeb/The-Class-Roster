@@ -36,6 +36,9 @@ public:
 
     // Function to remove a student by student ID
     void remove(const std::string& studentID);
+
+    //Function to get AvgDays
+    void printAverageDaysInCourse(const std::string& studentID);
 };
 
 #endif // ROSTER_H

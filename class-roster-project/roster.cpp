@@ -97,3 +97,22 @@ void Roster::remove(const std::string& studentID) {
     }
 }
 
+// Implement the printAverageDaysInCourse function
+void Roster::printAverageDaysInCourse(const std::string& studentID) {
+    // Find the student with the given studentID
+    for (int i = 0; i < classRosterArray.size(); ++i) {
+        if (classRosterArray[i]->getStudentID() == studentID) {
+            // Calculate and print the average days in course
+            int* daysInCourse = classRosterArray[i]->getDaysInCourse();
+            double averageDays = (daysInCourse[0] + daysInCourse[1] + daysInCourse[2]) / 3.0;
+
+            std::cout << "Average days in course for student " << studentID << ": " << averageDays << std::endl;
+            return;
+        }
+    }
+
+    // If studentID is not found, print an error message
+    std::cerr << "Error: Student with ID " << studentID << " not found." << std::endl;
+}
+
+

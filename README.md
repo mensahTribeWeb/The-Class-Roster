@@ -147,10 +147,36 @@ Note: This information should be included in the degree.h file.
 
 <image src="./README-IMG/using-vector.png" alt="using-vector"/>
 
-
 -[X]  b.  public void remove(string studentID)  that removes students from the roster by student ID. If the student ID does not exist, the function prints an error message indicating that the student was not found.
+
+        File Name: roster.h, roster.cpp, main.cpp
+        Line Number:  35-37, 37-39, 44-49
+        Change:  Declare remove function, implement the remove function, Add A7 student then remove as test
+
+#### Test Add Removal of student
+
+<image src="./README-IMG/Add-removal-test.png" alt="Add/Removal Test"/>
+
 -[X]  c. public void printAll() that prints a complete tab-separated list of student data in the provided format: A1 [tab] First Name: John [tab] Last Name: Smith [tab] Age: 20 [tab]daysInCourse: {35, 40, 55} Degree Program: Security. The printAll() function should loop through all the students in classRosterArray and call the print() function for each student.
+
+         File Name: main.cpp, roster.cpp, roster.h
+         Line Number:  42/49, 58-60, 21-23 requirements after use for testing a light adjustment
+         Change:  Refactor printAll() function and adjust return statement 
+
+#### Refactor printAll() function and adjust return statement
+
+<image src="./README-IMG/refactor-printall.png"/>
+
 -[X]  d.  public void printAverageDaysInCourse(string studentID)  that correctly prints a student’s average number of days in the three courses. The student is identified by the studentID parameter.
+
+        File Name: roster.h, roster.cpp, main.cpp
+        Line Number:39-41,  100-116, 41-44
+        Change:  Implement printAverageDaysInCourse function that correctly prints a student’s average number of days in the three courses identified by the studentID parameter.
+
+#### Implement printAverageDaysInCourse function
+
+<img src="./README-IMG/avg-day.png" alt="avg-day"/>
+
 -[X]  e.  public void printInvalidEmails() that verifies student email addresses and displays all invalid email addresses to the user.
 
     - Note: A valid email should include an at sign ('@') and period ('.') and should not include a space (' ').

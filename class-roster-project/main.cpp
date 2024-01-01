@@ -38,8 +38,10 @@ classRoster->add("A6", "Jane", "Doe", "jane.doe@email.com", 25, 35, 40, 30, Degr
 // Add another new student for testing removal
 classRoster->add("A7", "John", "Doe", "john.doe@email.com", 28, 45, 38, 29, DegreeProgram::NETWORK);
 
-
-classRoster->printAll();
+//Test  Avg Day in course
+std::cout << "Printing average days in course for A7:" << std::endl;
+classRoster->printAverageDaysInCourse("A7");
+std::cout << "Finished printing average days in course for A7." << std::endl;
 
 // Remove a student by ID (change 'A6' to a valid student ID)
 classRoster->remove("A7");
