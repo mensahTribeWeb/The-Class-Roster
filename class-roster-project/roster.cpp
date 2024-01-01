@@ -9,10 +9,14 @@
 using namespace std;
 
 Roster::Roster() {
-    lastIndex = 0;
+    
 }
 
-void Roster::parseAndAddStudent(const std::string& studentData) {
+void Roster::addStudent(Student* student) {
+    classRosterArray.push_back(student);
+}
+
+void Roster::parseAndAddStudent( std::string& studentData) {
     std::istringstream stream(studentData);
 
     std::string studentID, firstName, lastName, email;
@@ -49,21 +53,28 @@ void Roster::parseAndAddStudent(const std::string& studentData) {
     addStudent(newStudent);
 }
 
-void Roster::addStudent(Student* student) {
-    if (lastIndex < maxSize) {
-        classRosterArray[lastIndex++] = student;
-    }
-    else {
-        std::cerr << "Error: Roster is full, cannot add more students." << std::endl;
-        throw std::out_of_range("Error: Roster is full, cannot add more students.");
-    }
-}
 
 // Function to print all students in the roster
 void Roster::printAllStudents() {
-    for (int i = 0; i < lastIndex; ++i) {
+    for (int i = 0; i < classRosterArray.size(); ++i) {
         std::cout << "Student " << i + 1 << ":" << std::endl;
-        classRosterArray[i]->print();  // Assuming you have a print function in the Student class
+        classRosterArray[i]->print(); 
         std::cout << std::endl;
     }
 }
+
+void Roster::add(
+    const std::string& studentID,
+    const std::string& firstName,
+    const std::string& lastName,
+    const std::string& emailAddress,
+    int age,
+    int daysInCourse1,
+    int daysInCourse2,
+    int daysInCourse3,
+    DegreeProgram degreeProgram
+) {
+    Student* newStudent = new Student(studentID, firstName, lastName, emailAddress, age, daysInCourse1, daysInCourse2, daysInCourse3, degreeProgram);
+    addStudent(newStudent);
+}
+

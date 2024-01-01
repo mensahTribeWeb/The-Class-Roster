@@ -5,7 +5,7 @@
 #include <array>
 
 int main() {
-    Roster* classRoster = new Roster();
+    
 /**
  Course Title: C867 - SCRIPTING AND PROGRAMMING - APPLICATIONS
  TOOLS: Cpp
@@ -24,9 +24,16 @@ const std::string studentData[] = {
     "A5,Nicholas,Mensah,nmensa2@wqu.edu,39,30, 60, 90,SOFTWARE"
 };
 
+
+Roster* classRoster = new Roster();
 for (int i = 0; i < 5; i++) {
-    classRoster->parseAndAddStudent(studentData[i]);
+    std::string data = studentData[i];  
+    classRoster->parseAndAddStudent(data);
 }
+
+// Add a new student using the add function
+classRoster->add("A6", "Jane", "Doe", "jane.doe@email.com", 25, 35, 40, 30, DegreeProgram::SOFTWARE);
+
 
 classRoster->printAllStudents();
 

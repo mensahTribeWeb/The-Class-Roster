@@ -7,18 +7,31 @@
 
 #include "student.h"
 #include "degree.h"
+#include <vector>
 
 class Roster {
 private:
-    static const int maxSize = 5;
-    Student* classRosterArray[maxSize];
+    std::vector<Student*> classRosterArray;
     int lastIndex;
 
 public:
     Roster();
-    void parseAndAddStudent(const std::string& studentData);
+    void parseAndAddStudent( std::string& studentData);
     void addStudent(Student* student);
     void printAllStudents();
+
+    // Function to add a student with individual parameters
+    void add(
+        const std::string& studentID,
+        const std::string& firstName,
+        const std::string& lastName,
+        const std::string& emailAddress,
+        int age,
+        int daysInCourse1,
+        int daysInCourse2,
+        int daysInCourse3,
+        DegreeProgram degreeProgram
+    );
 };
 
 #endif // ROSTER_H

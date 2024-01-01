@@ -128,12 +128,24 @@ Note: This information should be included in the degree.h file.
         Change:   Parse student data and add students to classRosterArray in Roster class
                  - Updated Roster::parseAndAddStudent to parse student data from a string and add a Student object to classRosterArray.
                  - Updated Roster::addStudent to add a Student object to classRosterArray.
-                 
-<image src="./README-IMG/test-add-roster"/>
+ 
+#### Test Roster
+
+<image src="./README-IMG/test-add-roster.png"/>
 
 ### 3.  Define the following functions:
 
 -[X]  a.  public void add(string studentID, string firstName, string lastName, string emailAddress, int age, int daysInCourse1, int daysInCourse2, int daysInCourse3, DegreeProgram degreeprogram)  that sets the instance variables from part D1 and updates the roster.
+
+       File Name: #
+       Line Number:  #
+       Change:  #
+
+#### Test after switch to dynamic array(vector)
+
+<image src="./README_IMG/using-vector.png" alt="using vector to add 6th student"/>
+
+
 -[X]  b.  public void remove(string studentID)  that removes students from the roster by student ID. If the student ID does not exist, the function prints an error message indicating that the student was not found.
 -[X]  c. public void printAll() that prints a complete tab-separated list of student data in the provided format: A1 [tab] First Name: John [tab] Last Name: Smith [tab] Age: 20 [tab]daysInCourse: {35, 40, 55} Degree Program: Security. The printAll() function should loop through all the students in classRosterArray and call the print() function for each student.
 -[X]  d.  public void printAverageDaysInCourse(string studentID)  that correctly prints a student’s average number of days in the three courses. The student is identified by the studentID parameter.
