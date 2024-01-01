@@ -84,12 +84,12 @@ Note: This information should be included in the degree.h file.
 
       File Name: student.h, student.cpp
       Line Number:  1-28, 1-16
-      Change:  Add: 
+      Change:  Implement Student class with member variables, constructors
 
 
-#### student.cpp
+#### student.cpp, student.h C1
 
-   <div style="display: flex; flex-direction: row; gap: 6;">
+   <div style="display: flex; flex-direction: row; gap: 10px; width: 500px">
       <image src="./README-IMG/section-c-student-cpp.png" alt="c-student-cpp"/>
      <image src="./README-IMG/section-c-student-h.png" alt="c-student-h"/>
    </div>
@@ -105,7 +105,15 @@ Note: This information should be included in the degree.h file.
 
 -[X] d.  constructor using all of the input parameters provided in the table
 
--[X] e.  print() to print specific student data
+  -[X] e.  print() to print specific student data
+
+         File Name: student.h, student.cpp, degree.h
+         Line Number:  26-48, 34 - 118, 14-16
+         Change:   Complete implementation of the Student class:, 
+           Added accessors and mutators for each instance variable, 
+           Implemented constructor with all input parameters, 
+           Added print() function to display student data, 
+           degreeProgramToString function declaration
 
 ## E.  Create a Roster class (roster.cpp) by doing the following:
 
@@ -113,7 +121,15 @@ Note: This information should be included in the degree.h file.
 ### 2.  Create a student object for each student in the data table and populate classRosterArray.
 
 -[X] a.  Parse each set of data identified in the “studentData Table.”
--[X] b.  Add each student object to classRosterArray.
+  -[X] b.  Add each student object to classRosterArray.
+
+        File Name: roster.cpp, roster.h
+        Line Number:  1-60, 1-23
+        Change:   Parse student data and add students to classRosterArray in Roster class
+                 - Updated Roster::parseAndAddStudent to parse student data from a string and add a Student object to classRosterArray.
+                 - Updated Roster::addStudent to add a Student object to classRosterArray.
+                 
+<image src="./README-IMG/test-add-roster"/>
 
 ### 3.  Define the following functions:
 

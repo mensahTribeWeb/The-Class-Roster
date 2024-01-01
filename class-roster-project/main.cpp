@@ -5,6 +5,7 @@
 #include <array>
 
 int main() {
+    Roster* classRoster = new Roster();
 /**
  Course Title: C867 - SCRIPTING AND PROGRAMMING - APPLICATIONS
  TOOLS: Cpp
@@ -14,7 +15,7 @@ int main() {
 */
 
 // A.  Modify the “studentData Table” to include your personal information as the last item.
-
+    
 const std::string studentData[] = {
     "A1,John,Smith,John1989@gmail.com,20,30,35,40,SECURITY",
     "A2,Suzan,Erickson,Erickson_1990@gmailcom,19,50,30,40,NETWORK",
@@ -23,8 +24,18 @@ const std::string studentData[] = {
     "A5,Nicholas,Mensah,nmensa2@wqu.edu,39,30, 60, 90,SOFTWARE"
 };
 
+for (int i = 0; i < 5; i++) {
+    classRoster->parseAndAddStudent(studentData[i]);
+}
+
+classRoster->printAllStudents();
+
+delete classRoster;
+
 return 0;
 }
+
+
 #ifndef CLASS_ROSTER_H
 #define CLASS_ROSTER_H
 
