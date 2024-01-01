@@ -46,6 +46,14 @@ std::cout << "Finished printing average days in course for A7." << std::endl;
 // Remove a student by ID (change 'A6' to a valid student ID)
 classRoster->remove("A7");
 
+std::cout << std::endl;
+
+// Add A8 student for testing printInvalidEmails
+classRoster->add("A8", "Test", "Student", "test.student@invalid@address", 21, 30, 40, 50, DegreeProgram::SOFTWARE);
+
+// After adding A8, call the printInvalidEmails function to test
+classRoster->printInvalidEmails();
+
 // Print all students after removal
 std::cout << "\nAfter removal:\n";
 classRoster->printAll();

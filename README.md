@@ -179,7 +179,21 @@ Note: This information should be included in the degree.h file.
 
 -[X]  e.  public void printInvalidEmails() that verifies student email addresses and displays all invalid email addresses to the user.
 
+        File Name: roster.h, roster.cpp, 
+        Line Number:  43-44, 119-133, 49-53
+        Change:  #
     - Note: A valid email should include an at sign ('@') and period ('.') and should not include a space (' ').
+
+#### Implement printInvalidEmails Test
+
+<div style="display: flex; flex-direction: row; gap: 10px; width: 500px>
+
+<image src="./README-IMG/invalid-email-1.png" alt="invalid-email-cli"/>
+
+<image src="./README-IMG/invalid-email-2.png" alt="invalid-email-ide"/>
+
+<div/>
+
 -[X] f.  public void printByDegreeProgram(DegreeProgram degreeProgram) that prints out student information for a degree program specified by an enumerated type.
 
 ## F.  Demonstrate the program’s required functionality by adding a main() function in main.cpp, which will contain the required function calls to achieve the following results:
