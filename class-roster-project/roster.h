@@ -45,6 +45,11 @@ public:
 
     //Print By DegreeProgram Function
     void printByDegreeProgram(DegreeProgram degreeProgram);
+
+    // Function to get the size of the classRosterArray
+    int size() const;
+
+    Student* getStudentByID(int index) const;
 };
 
 #endif // ROSTER_H

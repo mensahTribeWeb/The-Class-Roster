@@ -1,73 +1,76 @@
 #include <iostream>
 #include "student.h" 
 #include "roster.h" 
+#include "degree.h"
 #include <string>
 #include <array>
 
-int main() {
+ int main() {
     
-/**
- Course Title: C867 - SCRIPTING AND PROGRAMMING - APPLICATIONS
- TOOLS: Cpp
- IDE: VISUAL STUDIO
- STUDENT ID: 010195113
- AUTHOR: NICK MENSAH
-*/
+     // Print out personal information
+     std::cout << "Course Title: C867 - SCRIPTING AND PROGRAMMING - APPLICATIONS" << std::endl;
+     std::cout << "Programming Language: C++" << std::endl;
+     std::cout << "WGU Student ID: 010195113" << std::endl;
+     std::cout << "Author: Nick Mensah" << std::endl;
 
-// A.  Modify the “studentData Table” to include your personal information as the last item.
-    
-const std::string studentData[] = {
-    "A1,John,Smith,John1989@gmail.com,20,30,35,40,SECURITY",
-    "A2,Suzan,Erickson,Erickson_1990@gmailcom,19,50,30,40,NETWORK",
-    "A3,Jack,Napoli,The_lawyer99@yahoo.com,19,20,40,33,SOFTWARE",
-    "A4,Erin,Black,Erin.black@comcast.net,22,50,58,40,SECURITY",
-    "A5,Nicholas,Mensah,nmensa2@wqu.edu,39,30, 60, 90,SOFTWARE"
-};
+     // Create an instance of the Roster class
+    Roster* classRoster = new Roster();
+
+    // Add each student to classRoster
+    const std::string studentData[] = {
+        "A1,John,Smith,John1989@gmail.com,20,30,35,40,SECURITY",
+        "A2,Suzan,Erickson,Erickson_1990@gmailcom,19,50,30,40,NETWORK",
+        "A3,Jack,Napoli,The_lawyer99@yahoo.com,19,20,40,33,SOFTWARE",
+        "A4,Erin,Black,Erin.black@comcast.net,22,50,58,40,SECURITY",
+        "A5,Nicholas,Mensah,nmensa2@wqu.edu,39,30, 60, 90,SOFTWARE"
+    };
 
 
-Roster* classRoster = new Roster();
-for (int i = 0; i < 5; i++) {
-    std::string data = studentData[i];  
-    classRoster->parseAndAddStudent(data);
+    for (int i = 0; i < 5; i++) {
+        std::string data = studentData[i];  
+        classRoster->parseAndAddStudent(data);
+    }
+
+    // Print all students
+    std::cout << "\nPrint All Students:" << std::endl;
+    classRoster->printAll();
+
+    // Print invalid emails
+    std::cout << "\nPrint Invalid Emails:" << std::endl;
+    classRoster->printInvalidEmails();
+
+    // Loop through classRosterArray and print average days in course for each student
+    std::cout << "\nPrint Average Days in Course:" << std::endl;
+    for (int i = 0; i < classRoster->size(); ++i) {
+        Student* currentStudent = classRoster->getStudentByID(i);
+        if (currentStudent) {
+            classRoster->printAverageDaysInCourse(currentStudent->getStudentID());
+        }
+    }
+
+    // Print by degree program (e.g., SOFTWARE)
+    std::cout << "\nPrint By Degree Program (SOFTWARE):" << std::endl;
+    classRoster->printByDegreeProgram(DegreeProgram::SOFTWARE);
+
+    // Remove student A3
+    std::cout << "\nRemove Student A3:" << std::endl;
+    classRoster->remove("A3");
+
+    // Print all students after removal
+    std::cout << "\nPrint All Students:" << std::endl;
+    classRoster->printAll();
+
+    // Attempt to remove student A3 again
+    std::cout << "\nRemove Student A3 Again:" << std::endl;
+    classRoster->remove("A3");
+
+    //destructor
+    classRoster->~Roster();
+    delete classRoster;
+
+    return 0;
 }
 
-// Add a new student using the add function
-classRoster->add("A6", "Jane", "Doe", "jane.doe@email.com", 25, 35, 40, 30, DegreeProgram::SOFTWARE);
-
-//test remove
-// Add another new student for testing removal
-classRoster->add("A7", "John", "Doe", "john.doe@email.com", 28, 45, 38, 29, DegreeProgram::NETWORK);
-
-//Test  Avg Day in course
-std::cout << "Printing average days in course for A7:" << std::endl;
-classRoster->printAverageDaysInCourse("A7");
-std::cout << "Finished printing average days in course for A7." << std::endl;
-
-// Remove a student by ID (change 'A6' to a valid student ID)
-classRoster->remove("A7");
-
-std::cout << std::endl;
-
-// Add A8 student for testing printInvalidEmails
-classRoster->add("A8", "Test", "Student", "test.student@invalid@address", 21, 30, 40, 50, DegreeProgram::SOFTWARE);
-
-// After adding A8, call the printInvalidEmails function to test
-classRoster->printInvalidEmails();
-
-// Testing printByDegreeProgram function for SOFTWARE degree program
-std::cout << "---- Printing students with SOFTWARE degree program ----" << std::endl;
-classRoster->printByDegreeProgram(DegreeProgram::SOFTWARE);
-std::cout << "--------------------------------------------------------" << std::endl;
-
-
-// Print all students after removal
-std::cout << "\nAfter removal:\n";
-classRoster->printAll();
-
-delete classRoster;
-
-return 0;
-}
 
 
 #ifndef CLASS_ROSTER_H

@@ -81,18 +81,16 @@ void Roster::add(
 //implement the remove function
 
 void Roster::remove(const std::string& studentID) {
-    bool studentRemoved = false;
+    auto it = std::remove_if(classRosterArray.begin(), classRosterArray.end(),
+        [studentID](const Student* student) {
+            return student->getStudentID() == studentID;
+        });
 
-    for (auto it = classRosterArray.begin(); it != classRosterArray.end(); ++it) {
-        if ((*it)->getStudentID() == studentID) {
-            it = classRosterArray.erase(it);  // Remove the student from the vector
-            --it;  // Adjust the iterator as erase shifts elements
-            studentRemoved = true;
-            break;  // No need to continue searching once the student is found
-        }
+    if (it != classRosterArray.end()) {
+        classRosterArray.erase(it, classRosterArray.end());
+        std::cout << "Student with ID " << studentID << " removed." << std::endl;
     }
-
-    if (!studentRemoved) {
+    else {
         std::cerr << "Error: Student with ID " << studentID << " not found." << std::endl;
     }
 }
@@ -137,11 +135,29 @@ void Roster::printInvalidEmails() {
 void Roster::printByDegreeProgram(DegreeProgram degreeProgram) {
     for (int i = 0; i < classRosterArray.size(); ++i) {
         if (classRosterArray[i]->getDegreeProgram() == degreeProgram) {
-            classRosterArray[i]->print();  
+            classRosterArray[i]->print();
             std::cout << std::endl;
         }
     }
+
+    // Add an else statement to handle invalid degree
+    if (degreeProgram != DegreeProgram::SECURITY && degreeProgram != DegreeProgram::NETWORK && degreeProgram != DegreeProgram::SOFTWARE) {
+        std::cerr << "Error: Invalid Degree Program" << std::endl;
+    }
 }
+
+// Function to get the size of the classRosterArray
+int Roster::size() const {
+    return classRosterArray.size();
+}
+
+Student* Roster::getStudentByID(int index) const {
+    if (index >= 0 && index < classRosterArray.size()) {
+        return classRosterArray[index];
+    }
+    return nullptr;  // Return nullptr if the index is out of bounds
+}
+
 
 
 
