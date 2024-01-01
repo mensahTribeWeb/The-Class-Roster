@@ -75,19 +75,19 @@ Note: This information should be included in the degree.h file.
 
 ### 1.  Create the class Student  in the files student.h and student.cpp, which includes each of the following variables:
 
--[X]  student ID
+- [X]  student ID
 
--[X]  first name
+- [X]  first name
 
--[X]  last name
+- [X]  last name
 
--[X]  email address
+- [X]  email address
 
--[X]  age
+- [X]  age
 
--[X]  array of number of days to complete each course
+- [X]  array of number of days to complete each course
 
--[X] degree program
+- [X] degree program
 
       label files inorder to get file names easily 
 
@@ -106,15 +106,15 @@ Note: This information should be included in the degree.h file.
 
 ### 2.  Create each of the following functions in the Student class:
 
--[X] a.  an accessor (i.e., getter) for each instance variable from part D1
+- [X] a.  an accessor (i.e., getter) for each instance variable from part D1
 
--[X] b.  a mutator (i.e., setter) for each instance variable from part D1
+- [X] b.  a mutator (i.e., setter) for each instance variable from part D1
 
--[X] c.  All external access and changes to any instance variables of the Student class must be done using accessor and mutator functions.
+- [X] c.  All external access and changes to any instance variables of the Student class must be done using accessor and mutator functions.
 
--[X] d.  constructor using all of the input parameters provided in the table
+- [X] d.  constructor using all of the input parameters provided in the table
 
-  -[X] e.  print() to print specific student data
+  - [X] e.  print() to print specific student data
 
          File Name: student.h, student.cpp, degree.h
          Line Number:  26-48, 34 - 118, 14-16
@@ -129,8 +129,8 @@ Note: This information should be included in the degree.h file.
 ### 1.  Create an array of pointers, classRosterArray, to hold the data provided in the “studentData Table.”
 ### 2.  Create a student object for each student in the data table and populate classRosterArray.
 
--[X] a.  Parse each set of data identified in the “studentData Table.”
-  -[X] b.  Add each student object to classRosterArray.
+- [X] a.  Parse each set of data identified in the “studentData Table.”
+  - [X] b.  Add each student object to classRosterArray.
 
         File Name: roster.cpp, roster.h
         Line Number:  1-60, 1-23
@@ -144,7 +144,7 @@ Note: This information should be included in the degree.h file.
 
 ### 3.  Define the following functions:
 
--[X]  a.  public void add(string studentID, string firstName, string lastName, string emailAddress, int age, int daysInCourse1, int daysInCourse2, int daysInCourse3, DegreeProgram degreeprogram)  that sets the instance variables from part D1 and updates the roster.
+- [X]  a.  public void add(string studentID, string firstName, string lastName, string emailAddress, int age, int daysInCourse1, int daysInCourse2, int daysInCourse3, DegreeProgram degreeprogram)  that sets the instance variables from part D1 and updates the roster.
 
        File Name: roster.h, roster.cpp, main.cpp
        Line Number:  19/14, 59-61,  34-37
@@ -155,7 +155,7 @@ Note: This information should be included in the degree.h file.
 
 <image src="./README-IMG/using-vector.png" alt="using-vector"/>
 
--[X]  b.  public void remove(string studentID)  that removes students from the roster by student ID. If the student ID does not exist, the function prints an error message indicating that the student was not found.
+- [X]  b.  public void remove(string studentID)  that removes students from the roster by student ID. If the student ID does not exist, the function prints an error message indicating that the student was not found.
 
         File Name: roster.h, roster.cpp, main.cpp
         Line Number:  35-37, 37-39, 44-49
@@ -165,7 +165,7 @@ Note: This information should be included in the degree.h file.
 
 <image src="./README-IMG/Add-removal-test.png" alt="Add/Removal Test"/>
 
--[X]  c. public void printAll() that prints a complete tab-separated list of student data in the provided format: A1 [tab] First Name: John [tab] Last Name: Smith [tab] Age: 20 [tab]daysInCourse: {35, 40, 55} Degree Program: Security. The printAll() function should loop through all the students in classRosterArray and call the print() function for each student.
+- [X]  c. public void printAll() that prints a complete tab-separated list of student data in the provided format: A1 [tab] First Name: John [tab] Last Name: Smith [tab] Age: 20 [tab]daysInCourse: {35, 40, 55} Degree Program: Security. The printAll() function should loop through all the students in classRosterArray and call the print() function for each student.
 
          File Name: main.cpp, roster.cpp, roster.h
          Line Number:  42/49, 58-60, 21-23 requirements after use for testing a light adjustment
@@ -175,7 +175,7 @@ Note: This information should be included in the degree.h file.
 
 <image src="./README-IMG/refactor-printall.png"/>
 
--[X]  d.  public void printAverageDaysInCourse(string studentID)  that correctly prints a student’s average number of days in the three courses. The student is identified by the studentID parameter.
+- [X]  d.  public void printAverageDaysInCourse(string studentID)  that correctly prints a student’s average number of days in the three courses. The student is identified by the studentID parameter.
 
         File Name: roster.h, roster.cpp, main.cpp
         Line Number:39-41,  100-116, 41-44
@@ -185,7 +185,7 @@ Note: This information should be included in the degree.h file.
 
 <img src="./README-IMG/avg-day.png" alt="avg-day"/>
 
--[X]  e.  public void printInvalidEmails() that verifies student email addresses and displays all invalid email addresses to the user.
+- [X]  e.  public void printInvalidEmails() that verifies student email addresses and displays all invalid email addresses to the user.
 
         File Name: roster.h, roster.cpp, 
         Line Number:  43-44, 119-133, 49-53
@@ -197,7 +197,7 @@ Note: This information should be included in the degree.h file.
 <image src="./README-IMG/invalid-email-2.png" alt="invalid-email-ide"/>
 <image src="./README-IMG/invalid-email-1.png" alt="invalid-email-cli"/>
 
--[X] f.  public void printByDegreeProgram(DegreeProgram degreeProgram) that prints out student information for a degree program specified by an enumerated type.
+- [X] f.  public void printByDegreeProgram(DegreeProgram degreeProgram) that prints out student information for a degree program specified by an enumerated type.
 
         File Name: roster.h, roster.cpp, main.cpp
         Line Number:  47, 135-145, 57-62
