@@ -34,7 +34,18 @@ for (int i = 0; i < 5; i++) {
 // Add a new student using the add function
 classRoster->add("A6", "Jane", "Doe", "jane.doe@email.com", 25, 35, 40, 30, DegreeProgram::SOFTWARE);
 
+//test remove
+// Add another new student for testing removal
+classRoster->add("A7", "John", "Doe", "john.doe@email.com", 28, 45, 38, 29, DegreeProgram::NETWORK);
 
+
+classRoster->printAllStudents();
+
+// Remove a student by ID (change 'A6' to a valid student ID)
+classRoster->remove("A7");
+
+// Print all students after removal
+std::cout << "\nAfter removal:\n";
 classRoster->printAllStudents();
 
 delete classRoster;

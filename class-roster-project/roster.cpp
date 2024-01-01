@@ -78,3 +78,22 @@ void Roster::add(
     addStudent(newStudent);
 }
 
+//implement the remove function
+
+void Roster::remove(const std::string& studentID) {
+    bool studentRemoved = false;
+
+    for (auto it = classRosterArray.begin(); it != classRosterArray.end(); ++it) {
+        if ((*it)->getStudentID() == studentID) {
+            it = classRosterArray.erase(it);  // Remove the student from the vector
+            --it;  // Adjust the iterator as erase shifts elements
+            studentRemoved = true;
+            break;  // No need to continue searching once the student is found
+        }
+    }
+
+    if (!studentRemoved) {
+        std::cerr << "Error: Student with ID " << studentID << " not found." << std::endl;
+    }
+}
+

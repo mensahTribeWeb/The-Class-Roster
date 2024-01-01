@@ -81,6 +81,7 @@ Note: This information should be included in the degree.h file.
 
 -[X] degree program
 
+      label files inorder to get file names easily 
 
       File Name: student.h, student.cpp
       Line Number:  1-28, 1-16
@@ -137,13 +138,14 @@ Note: This information should be included in the degree.h file.
 
 -[X]  a.  public void add(string studentID, string firstName, string lastName, string emailAddress, int age, int daysInCourse1, int daysInCourse2, int daysInCourse3, DegreeProgram degreeprogram)  that sets the instance variables from part D1 and updates the roster.
 
-       File Name: #
-       Line Number:  #
-       Change:  #
+       File Name: roster.h, roster.cpp, main.cpp
+       Line Number:  19/14, 59-61,  34-37
+       Change: 3a-Updated Roster class to use std::vector<Student*> for dynamic storage, Removed redundant array-based functions, Implemented the `add` function to add new students to the roster, Updated usage of `classRosterArray.size()` to work with vectors, Added a new student A6 using the `add` function  
 
 #### Test after switch to dynamic array(vector)
+- nothing did not indicate the i could not use a dynamic array(vector) so i updated to add new student 
 
-<image src="./README_IMG/using-vector.png" alt="using vector to add 6th student"/>
+<image src="./README-IMG/using-vector.png" alt="using-vector"/>
 
 
 -[X]  b.  public void remove(string studentID)  that removes students from the roster by student ID. If the student ID does not exist, the function prints an error message indicating that the student was not found.

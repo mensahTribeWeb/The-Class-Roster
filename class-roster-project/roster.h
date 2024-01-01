@@ -32,6 +32,9 @@ public:
         int daysInCourse3,
         DegreeProgram degreeProgram
     );
+
+    // Function to remove a student by student ID
+    void remove(const std::string& studentID);
 };
 
 #endif // ROSTER_H
